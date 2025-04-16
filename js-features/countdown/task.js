@@ -17,6 +17,7 @@ function countDown() {
     setTimeout(countDown, 1000);
   } else {
     alert("Вы победили в конкурсе!");
+    window.location.href = "download.zip"
   }
 }
 

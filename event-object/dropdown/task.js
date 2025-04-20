@@ -17,7 +17,7 @@ dropdowns.forEach((dropdown) => {
     if (dropdownItem) {
       const selectedItem = dropdownItem.textContent;
       dropdownValue.textContent = selectedItem;
-      dropdownList.classList.remove("dropdown__list_active");
+      dropdownList.classList.toggle("dropdown__list_active");
     }
   });
 });

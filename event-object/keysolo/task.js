@@ -20,12 +20,11 @@ class Game {
     document.addEventListener("keydown", (e) => {
       if (e.altKey || e.shiftKey || e.ctrlKey) {
         return;
+      }
+      if (e.key.toLocaleLowerCase() === this.currentSymbol.textContent) {
+        this.success();
       } else {
-        if (e.key.toLocaleLowerCase() === this.currentSymbol.textContent) {
-          this.success();
-        } else {
-          this.fail();
-        }
+        this.fail();
       }
     });
     /*

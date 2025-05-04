@@ -9,7 +9,12 @@ body {
 
 .cart__product {
   position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
+
 .cart__product-count {
   position: absolute;
   top: 0;
@@ -88,4 +93,9 @@ body {
 
 .product-shadow {
   position: absolute;
+}
+
+.cart__product-remove {
+  display: block;
+  background: red;
 }

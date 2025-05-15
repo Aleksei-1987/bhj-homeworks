@@ -1,3 +1,9 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
 textarea {
   max-width: 100%;
   width: 100%;
@@ -8,3 +14,8 @@ textarea {
   border: 1px solid #e2e2e2;
   box-sizing: border-box;
 }
+
+.clear {
+  background-color: green;
+}
+

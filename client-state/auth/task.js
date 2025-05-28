@@ -8,8 +8,7 @@ const url = "https://students.netoservices.ru/nestjs-backend/auth";
 window.addEventListener("DOMContentLoaded", () => {
   const storedUserID = localStorage.getItem("user_id");
   if (storedUserID) {
-    signin.classList.remove("signin_active");
-    welcome.classList.add("welcome_active");
+    removeActiveWelcomeAddActiveSignin();
     user.textContent = storedUserID;
     addLogoutBtn();
   }
@@ -63,7 +62,11 @@ function addLogoutBtn() {
   outBtn.addEventListener("click", (e) => {
     e.preventDefault();
     localStorage.removeItem("user_id");
-    welcome.classList.remove("welcome_active");
-    signin.classList.add("signin_active");
+    removeActiveWelcomeAddActiveSignin();
   });
+}
+
+function removeActiveWelcomeAddActiveSignin() {
+  welcome.classList.remove("welcome_active");
+  signin.classList.add("signin_active");
 }
